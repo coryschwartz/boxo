@@ -93,7 +93,7 @@ func (b *tqcache) unlock(key string, write bool) {
 }
 
 func cacheKey(k cid.Cid) string {
-	return string(k.Hash())
+	return string(k.Bytes())
 }
 
 func (b *tqcache) DeleteBlock(ctx context.Context, k cid.Cid) error {
